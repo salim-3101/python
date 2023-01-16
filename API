@@ -1,0 +1,23 @@
+1. Introduction
+ This document outlines the technical specifications for creating a  REST API to monitor requests sent through Vodafone Submitsms SOAP API and fetch the SSID.
+ 2. Objective 
+The main objective of this project is to create an API that can monitor requests sent through Vodafone Sunmitsms SOAP API and fetch the SSID.
+ 3. Overview 
+The API will use JSON as the primary data format for communication, and will have a RESTful API design. It will be responsible for monitoring requests sent through Vodafone Sunmitsms SOAP API and fetching the SSID.
+ 4. API Endpoints The API endpoints will be as follows: - 
+GET /request/{requestID}: This endpoint will be used to retrieve the SSID for a given request ID. - POST /request: This endpoint will be used to submit a request through the Vodafone Sunmitsms SOAP API. 
+5. Parameters
+ The following parameters are required to submit a request: - RequestID (string): The unique ID of the request - Sender (string): The sender of the request - Recipient (string): The recipient of the request - Message (string): The message to be sent 
+6. Authentication
+ The API will use basic authentication for all requests.
+ 7. Response
+ The API will return a JSON response with the following structure: 
+{ "requestID": "123456789", "ssid": "123456789", "status": "success" } 
+8. Error Handling
+ The API will return a JSON response with an error code and message in case of an error. The error code will be a HTTP status code. 
+9. Rate Limiting 
+The API will have a rate limit of 100 requests per minute.
+10. Security
+ The API will use SSL encryption for all requests. 
+11. Documentation 
+The API will have comprehensive documentation available online. This will include detailed instructions on how to use the API, a list of all the endpoints, parameters, and response codes.
